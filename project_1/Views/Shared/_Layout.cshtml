@@ -1,0 +1,278 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet">
+    <title>Index</title>
+    <style>
+        .navbar {
+        }
+
+        .navbar-brand {
+        }
+
+        .navbar-default a {
+        }
+
+            .navbar-default a:hover {
+                background-color: white !important;
+                color: black !important;
+                text-decoration: none;
+                transition: background-color 0.3s ease-in, color 0.3s ease-in;
+            }
+
+        .navbar-nav a {
+        }
+
+
+        .navbar-default {
+            padding-bottom: 20px;
+            padding-top: 20px;
+            background-color: #171717;
+            border: none;
+            font-family: 'PT Sans Caption', sans-serif;
+            font-size: medium;
+            margin-bottom: 0;
+            font-size: 18px;
+        }
+
+        body {
+            font-family: 'PT Sans Caption', sans-serif;
+        }
+
+        .navbar-default .navbar-brand {
+            color: black;
+        }
+
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: white;
+            }
+
+        .navbar-default .navbar-text {
+            color: white;
+        }
+
+        .navbar-default .navbar-nav > li > a {
+            color: white;
+            text-align: center;
+            outline: none;
+            text-decoration: none;
+            transition: background-color 0.2s ease-out, color 0.2s ease-out;
+        }
+
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                background-color: black;
+                color: white;
+                text-decoration: none;
+                transition: background-color 0.3s ease-in, color 0.3s ease-in;
+            }
+
+        .navbar-default .navbar-nav > .active > a,
+        .navbar-default .navbar-nav > .active > a:hover,
+        .navbar-default .navbar-nav > .active > a:focus {
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in, color 0.3s ease-in;
+        }
+
+        .navbar-default .navbar-nav > .open > a,
+        .navbar-default .navbar-nav > .open > a:hover,
+        .navbar-default .navbar-nav > .open > a:focus {
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in, color 0.3s ease-in;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: white;
+        }
+
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: black;
+            }
+
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: white;
+            }
+
+        .navbar-default .navbar-collapse,
+        .navbar-default .navbar-form {
+            border-color: black;
+        }
+
+        .navbar-default .navbar-link {
+            color: white;
+        }
+
+            .navbar-default .navbar-link:hover {
+                color: white;
+            }
+
+        .panel-body {
+        }
+
+        .panel {
+            padding-left: 0;
+            padding-right: 0;
+            color: black;
+            border-radius: 0px;
+            background: none !important;
+            border: none !important;
+        }
+
+            .panel > .panel-heading {
+                background-image: none;
+                background: none;
+                color: black;
+                border-radius: 0px;
+                border: none !important;
+            }
+
+        .thumbnail {
+            border-radius: 0px;
+            border: none;
+            background: none !important;
+            text-align:center;
+        }
+
+        .ghost-button {
+            display: inline-block;
+            padding: 8px;
+            color: black;
+            border: 2px solid black;
+            text-align: center;
+            outline: none;
+            text-decoration: none;
+            transition: background-color 0.2s ease-out, color 0.2s ease-out;
+        }
+
+            .ghost-button:hover,
+            .ghost-button:active {
+                background-color: black;
+                color: white;
+                text-decoration: none;
+                transition: background-color 0.3s ease-in, color 0.3s ease-in;
+            }
+
+        .category-image {
+            opacity: 0.9;
+            filter: alpha(opacity=50); /* For IE8 and earlier */
+            border:black solid 0.5px;
+        }
+
+            .category-image:hover {
+                opacity: 1.0;
+                filter: alpha(opacity=100); /* For IE8 and earlier */
+            }
+
+        .carousel-wrapper {
+            padding-bottom: 30px;
+            padding-top: 30px;
+            background-image: url(Images/bg_3.png);
+        }
+
+        .nav-wrapper {
+            background-color: #171717;
+        }
+
+        .body-wrapper {
+            background-image: url(Images/bg_3.png);
+            color: black;
+            border-top: black dashed 2px;
+            padding-bottom: 25px;
+            text-align: center;
+        }
+
+        .footer-wrapper {
+            background-color: #171717;
+            color: white;
+            padding-top: 10px;
+        }
+
+        .carousel-inner-wrapper {
+            border: black solid thin;
+        }
+
+        .copyright-wrapper {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: white thin solid;
+            text-align: center;
+        }
+
+        .general-wrapper {
+            background-image: url('../Images/bg_3.png');
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-wrapper">
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img height="51" width="149" src="~/Images/logo_web.png" />
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("Главная", "Index")</li>
+                        <li>@Html.ActionLink("Каталог товаров", "Categories")</li>
+                        <li>@Html.ActionLink("Доставка", "Delivery")</li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    @RenderBody()
+
+
+    <div class="footer-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="nav-part col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                    <p>Режим работы интернет магазина:</p>
+                    <p>Пн-Пт с 8:00 до 19:00</p>
+                    <p>Сб с 9:00 до 18:00</p>
+                </div>
+                <div class="nav-part col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                    <p>Контактные телефоны:</p>
+                    <p>Kyivstar (096) 1111111</p>
+                    <p>МТС (050) 0000000</p>
+                </div>
+                <div class="nav-part col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                    <p>Адрес электронной почты:</p>
+                    <p>agro@agro.agro</p>
+                </div>
+            </div>
+            <div class="copyright-wrapper">
+                <p>Все права защищены  AgroStroi.com.ua &copy; & maxon_adc 2017</p>
+                <p>Icons made by Freepik from www.flaticon.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
