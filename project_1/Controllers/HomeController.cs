@@ -34,5 +34,10 @@ namespace project_1.Controllers
         {
             return View();
         }
+
+        public ActionResult Contacts()
+        {
+            return View();
+        }
     }
 }
