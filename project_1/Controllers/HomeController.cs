@@ -21,13 +21,19 @@ namespace project_1.Controllers
             return View(repository.Categories.ToList());
         }
 
-        public ActionResult Products(int categoryId)
+        public ActionResult Category(int categoryId)
         {
             Category cat = repository.Categories.Where(c => c.Id == categoryId).FirstOrDefault();
             ViewBag.ImageName = cat.ImageName;
             ViewBag.Description = cat.Description;
             ViewBag.Name = cat.Name;
             return View(repository.Products.Where(p => p.CategoryId == categoryId).ToList());
+        }
+
+        public ActionResult Product(int productId)
+        {
+            Product prod = repository.Products.Where(p => p.Id == productId).FirstOrDefault();
+            return View(prod);
         }
 
         public ActionResult Delivery()

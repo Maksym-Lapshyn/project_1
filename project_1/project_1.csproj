@@ -159,10 +159,11 @@
     <Content Include="Views\Admin\EditCategory.cshtml" />
     <Content Include="Views\Admin\EditProduct.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Home\Products.cshtml" />
+    <Content Include="Views\Home\Category.cshtml" />
     <Content Include="Views\Home\Categories.cshtml" />
     <Content Include="Views\Home\Delivery.cshtml" />
     <Content Include="Views\Home\Contacts.cshtml" />
+    <Content Include="Views\Home\Product.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

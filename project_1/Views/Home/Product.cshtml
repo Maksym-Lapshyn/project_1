@@ -1,0 +1,15 @@
+﻿@model project_1.Models.Product
+
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="general-wrapper">
+    <div class="container text-center">
+        <img class="category-image" src="~/Images/@Model.ImageName" style="height:75%; width:75%; margin-top:20px;"/>
+        <h1>@Model.Name</h1>
+        <p class="text-justify">@Model.Description</p>
+        <h3>Стоимость наименования - @Model.Price UAH</h3>
+    </div>
+</div>
