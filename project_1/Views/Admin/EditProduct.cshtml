@@ -2,15 +2,16 @@
 @using project_1.Models
 
 @{
-    ViewBag.Title = "Админка: изменение товара " + Model.Name;
+    ViewBag.Title = "Изменение товара " + Model.Name;
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <div class="panel">
     <div class="panel-heading">
-        @if (ViewBag.New == true || Html.ValidationSummary() != MvcHtmlString.Empty)
+        @if (ViewBag.New == true && Html.ValidationSummary() != MvcHtmlString.Empty)
         {
-            <h3>Добавление нового товара</h3>
+            <h3>Добавление новой категории</h3>
+            ViewBag.Title = false;
         }
         else
         {

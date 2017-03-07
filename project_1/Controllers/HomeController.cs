@@ -24,6 +24,7 @@ namespace project_1.Controllers
         public ActionResult Category(int categoryId)
         {
             Category cat = repository.Categories.Where(c => c.Id == categoryId).FirstOrDefault();
+            ViewBag.CategoryName = cat.Name;
             ViewBag.ImageName = cat.ImageName;
             ViewBag.Description = cat.Description;
             ViewBag.Name = cat.Name;

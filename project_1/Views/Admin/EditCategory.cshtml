@@ -1,15 +1,16 @@
 ﻿@model project_1.Models.Category
 
 @{
-    ViewBag.Title = "Админка: изменение категории " + Model.Name;
+    ViewBag.Title = "Изменение категории " + Model.Name;
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <div class="panel">
     <div class="panel-heading">
-        @if (ViewBag.New == true || Html.ValidationSummary() != MvcHtmlString.Empty)
+        @if (ViewBag.New == true && Html.ValidationSummary() != MvcHtmlString.Empty)
         {
             <h3>Добавление новой категории</h3>
+            ViewBag.Title = false;
         }
         else
         {
