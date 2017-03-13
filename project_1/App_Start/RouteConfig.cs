@@ -13,7 +13,7 @@ namespace project_1
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
+            /*routes.MapRoute(
                 null,
                 "{action}/{id}",
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional }
@@ -23,13 +23,32 @@ namespace project_1
                 null,
                 "{action}/{id}", 
                 new { controller = "Home", id = UrlParameter.Optional }
+            );*/
+
+            routes.LowercaseUrls = true;
+
+            routes.MapRoute(
+                name: null,
+                url: "",
+                defaults: new { controller = "Home", action = "Index" }
+            );
+
+            routes.MapRoute(
+                name: null,
+                url: "{action}",
+                defaults: new { controller = "Home" }
             );
 
             routes.MapRoute(
                 name: "Default",
+                url: "{controller}/{action}"
+            );
+
+            /*routes.MapRoute(
+                name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+            );*/
         }
     }
 }
