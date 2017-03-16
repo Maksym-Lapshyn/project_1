@@ -1,15 +1,34 @@
 ﻿@model project_1.Models.Product
 
 @{
-    ViewBag.Title = "Агрострой - Товар " + Model.Name;
+    ViewBag.Title = "Агрострой - Купить " + Model.Name + " в Харькове дешево";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="general-wrapper">
+<div class="general-wrapper" style="min-height:75vh;">
     <div class="container text-center">
         <img class="category-image" src="~/Images/@Model.ImageName" style="height:75%; width:75%; margin-top:20px;"/>
         <h1>@Model.Name</h1>
-        <p class="text-justify">@Model.Description</p>
+        <div class="product-description">
+                <p class="text-justify">@Model.Description</p>
+        </div>
         <h3>Стоимость наименования - @Model.Price UAH</h3>
     </div>
-</div>
+</div> 
+
+<!--
+<div class="general-wrapper" style="min-height:75vh;">
+    <div class="container">
+        <div class="panel panel-default col-xs-12 col-sm-12 col-md-7 col-lg-8">
+            <img alt="@Model.Name" class="category-image" src="~/Images/@Model.ImageName" style="height:100%; width:100%;" />
+        </div>
+        <div class="panel panel-default col-xs-12 col-sm-12 col-md-5 col-lg-4" style="padding-left:20px; padding-right:20px;">
+            <h1>@Model.Name</h1>
+            <div class="product-description">
+                <p class="text-justify">@Model.Description</p>
+            </div>
+            <h3>Стоимость наименования - @Model.Price UAH</h3>
+        </div>
+    </div>
+</div> 
+    -->

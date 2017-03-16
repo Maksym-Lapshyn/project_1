@@ -7,6 +7,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Садовые и строительные инструменты и материалы в Харькове по низкой цене! Высокое качество, быстрая доставка." />
     <script src="~/Scripts/jquery-3.1.1.js"></script>
     <script src="~/Scripts/bootstrap.js"></script>
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
@@ -22,11 +23,14 @@
         .navbar-default a {
         }
 
-            .navbar-default a:hover {
+            .menu-right a:hover {
                 background-color: white !important;
                 color: black !important;
                 text-decoration: none;
                 transition: background-color 0.3s ease-in, color 0.3s ease-in;
+            }
+            .menu-left a:hover {
+                background-color: none !important;
             }
 
         .navbar-nav a {
@@ -145,7 +149,7 @@
             border-radius: 0px;
             border: none;
             background: none !important;
-            text-align:center;
+            text-align: center;
         }
 
         .ghost-button {
@@ -170,7 +174,7 @@
         .category-image {
             opacity: 0.9;
             filter: alpha(opacity=50); /* For IE8 and earlier */
-            border:black solid 0.5px;
+            border: black solid 0.5px;
         }
 
             .category-image:hover {
@@ -214,18 +218,28 @@
         }
 
         .general-wrapper {
-            background-image: url('../../Images/bg_3.png');
+            background-image: url('../Images/bg_3.png');
             padding-top: 30px;
             padding-bottom: 30px;
-            color:black;
+            color: black;
         }
 
-        .delivery{
-            padding-top:30px;
+        .delivery {
+            padding-top: 30px;
         }
 
-        .credits{
-            font-size:smaller;
+        .credits {
+            font-size: smaller;
+        }
+
+        .logo:hover {
+            background-color: none !important;
+        }
+        .product-description{
+            border-top:dashed black;
+            border-bottom:dashed black;
+            padding-top:15px;
+            padding-bottom:10px;
         }
     </style>
 </head>
@@ -239,16 +253,21 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <img height="51" width="149" src="~/Images/logo_web.png" />
+                    <div class="menu-left">
+                        <a href="index"><img height="51" width="149" src="~/Images/logo_web.png" /></a>
+                    </div>
                 </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>@Html.ActionLink("Главная", "Index")</li>
-                        <li>@Html.ActionLink("Каталог товаров", "Categories")</li>
-                        <li>@Html.ActionLink("Доставка", "Delivery")</li>
-                        <li>@Html.ActionLink("Контакты", "Contacts")</li>
-                    </ul>
+                <div class="menu-right">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>@Html.ActionLink("Главная", "Index")</li>
+                            <li>@Html.ActionLink("Каталог товаров", "Categories")</li>
+                            <li>@Html.ActionLink("Доставка", "Delivery")</li>
+                            <li>@Html.ActionLink("Контакты", "Contacts")</li>
+                        </ul>
+                    </div>
                 </div>
+                
             </nav>
         </div>
     </div>
@@ -259,18 +278,34 @@
 
     <div class="footer-wrapper">
         <div class="container">
-            <div class="row">
-                <div class="nav-part col-xs-12 col-sm-12 col-md-6 col-lg-4">
+            <div class="row visible-lg visible-md visible-sm">
+                <div class="nav-part col-sm-4 col-md-4 col-lg-4">
                     <p><span class="glyphicon glyphicon-time"></span> Режим работы интернет магазина:</p>
                     <p>Пн-Пт с 8:00 до 19:00</p>
                     <p>Сб с 9:00 до 18:00</p>
                 </div>
-                <div class="nav-part col-xs-12 col-sm-12 col-md-6 col-lg-4 text-center">
+                <div class="nav-part col-sm-4 col-md-4 col-lg-4 text-center">
                     <p><span class="glyphicon glyphicon-phone-alt"></span> Контактные телефоны:</p>
                     <p>Kyivstar (096) 1111111</p>
                     <p>МТС (050) 0000000</p>
                 </div>
-                <div class="nav-part col-xs-12 col-sm-12 col-md-6 col-lg-4 text-right">
+                <div class="nav-part col-sm-4 col-md-4 col-lg-4 text-right">
+                    <p><span class="glyphicon glyphicon-envelope"></span> Адрес электронной почты:</p>
+                    <p>agro@agro.agro</p>
+                </div>
+            </div>
+            <div class="row visible-xs">
+                <div class="nav-part col-xs-12 text-center">
+                    <p><span class="glyphicon glyphicon-time"></span> Режим работы интернет магазина:</p>
+                    <p>Пн-Пт с 8:00 до 19:00</p>
+                    <p>Сб с 9:00 до 18:00</p>
+                </div>
+                <div class="nav-part col-xs-12 text-center">
+                    <p><span class="glyphicon glyphicon-phone-alt"></span> Контактные телефоны:</p>
+                    <p>Kyivstar (096) 1111111</p>
+                    <p>МТС (050) 0000000</p>
+                </div>
+                <div class="nav-part col-xs-12 text-center">
                     <p><span class="glyphicon glyphicon-envelope"></span> Адрес электронной почты:</p>
                     <p>agro@agro.agro</p>
                 </div>
@@ -279,7 +314,6 @@
                 <p>Все права защищены  AgroStroi.com.ua &copy; & maxon_adc 2017</p>
                 <p><span class="credits">Icons made by Freepik from www.flaticon.com</span></p>
             </div>
-        </div>
     </div>
 </body>
 </html>

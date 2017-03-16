@@ -18,7 +18,7 @@ namespace project_1.Controllers
 
         public ActionResult Categories()
         {
-            return View(repository.Categories.ToList());
+            return View(repository.Categories);
         }
 
         public ActionResult Category(int categoryId)

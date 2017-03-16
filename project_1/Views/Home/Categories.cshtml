@@ -1,8 +1,8 @@
 ﻿@using project_1.Models
-@model List<Category>
+@model IEnumerable<Category>
 
 @{
-    ViewBag.Title = "Агрострой - Категории";
+    ViewBag.Title = "Агрострой - Купить садовые и строительные инструменты и материалы в Харькове по низкой цене";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -13,7 +13,7 @@
             {
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                     <div class="thumbnail">
-                        <img class="category-image" src="../Images/@category.ImageName" />
+                        <img alt="@category.Name" class="category-image" src="../Images/@category.ImageName" />
                         <div class="caption">
                             <h4>
                                 @Html.ActionLink(category.Name, "Category", new { categoryId = category.Id }, new {@class = "ghost-button"})

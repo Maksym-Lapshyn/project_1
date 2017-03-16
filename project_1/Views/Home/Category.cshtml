@@ -2,22 +2,22 @@
 @model List<Product>
 
 @{
-    ViewBag.Title = "Агрострой - Категория " + ViewBag.CategoryName;
+    ViewBag.Title = "Агрострой - Купить " + ViewBag.CategoryName + " в Харькове дешево";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="general-wrapper">
+<div class="general-wrapper" style="min-height:75vh;">
     <div class="container">
         <h1 class="text-center">@ViewBag.Name:</h1>
         <p class="text-justify">
             @ViewBag.Description
         </p>
-        <h1 class="text-center">Товары категории:</h1>
+        <h3 class="text-center">Товары категории:</h3>
         @foreach (var product in Model)
             {
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                 <div class="thumbnail">
-                    <img class="category-image" src="../Images/@product.ImageName" />
+                    <img alt="@product.Name" class="category-image" src="../Images/@product.ImageName" />
                     <div class="caption">
                         <h4>
                             @Html.ActionLink(product.Name, "Product", new { productId = product.Id }, new { @class = "ghost-button" })
