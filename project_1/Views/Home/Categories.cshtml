@@ -13,7 +13,7 @@
             {
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                     <div class="thumbnail">
-                        <img alt="@category.Name" class="category-image" src="../Images/@category.ImageName" />
+                        <img alt="@category.Name" class="category-image" src="../Images/@category.ImageName" title="@category.Name"/>
                         <div class="caption">
                             <h4>
                                 @Html.ActionLink(category.Name, "Category", new { categoryId = category.Id }, new {@class = "ghost-button"})
