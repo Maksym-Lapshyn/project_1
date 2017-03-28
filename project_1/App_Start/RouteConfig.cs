@@ -23,6 +23,12 @@ namespace project_1
 
             routes.MapRoute(
                 name: null,
+                url: "admin",
+                defaults: new { controller = "Admin", action = "Index" }
+            );
+
+            routes.MapRoute(
+                name: null,
                 url: "{action}",
                 defaults: new { controller = "Home" }
             );
